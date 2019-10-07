@@ -242,7 +242,7 @@ UPDATE static_countries SET cn_short_tr='Heard ve McDonald Adaları' WHERE cn_is
 UPDATE static_countries SET cn_short_tr='Karadağ' WHERE cn_iso_2='ME';
 UPDATE static_countries SET cn_short_tr='Sırbistan' WHERE cn_iso_2='RS';
 UPDATE static_countries SET cn_short_tr='Jersey' WHERE cn_iso_2='JE';
-UPDATE static_countries SET cn_short_tr='bir tür inek' WHERE cn_iso_2='GG';
+UPDATE static_countries SET cn_short_tr='Guernsey' WHERE cn_iso_2='GG';
 UPDATE static_countries SET cn_short_tr='Man Adası' WHERE cn_iso_2='IM';
 UPDATE static_countries SET cn_short_tr='Aziz Martin' WHERE cn_iso_2='MF';
 UPDATE static_countries SET cn_short_tr='Saint Barthelemy' WHERE cn_iso_2='BL';
