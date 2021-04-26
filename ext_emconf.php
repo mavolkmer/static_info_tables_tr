@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUndefinedVariableInspection */
 
 /***************************************************************
  * Extension Manager/Repository config file for ext "static_info_tables_tr".
@@ -11,7 +12,7 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Static Info Tables (tr)',
     'description' => 'Turkish (tr) language pack for the Static Info Tables providing localized names for countries.',
     'category' => 'misc',
-    'version' => '6.9.1',
+    'version' => '6.9.2',
     'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => '',
