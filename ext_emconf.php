@@ -14,15 +14,12 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'misc',
     'version' => '6.9.2',
     'state' => 'stable',
-    'uploadfolder' => false,
-    'createDirs' => '',
-    'clearCacheOnLoad' => false,
     'author' => 'Ephraim Härer',
     'author_email' => 'ephraim.haerer@renolit.com',
     'author_company' => 'RENOLIT SE',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-10.4.99',
+            'typo3' => '10.4.0-11.5.99',
             'static_info_tables' => '6.9.0-6.9.99',
             'php' => '7.2.0-0.0.0',
         ],
