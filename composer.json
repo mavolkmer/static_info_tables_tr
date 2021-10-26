@@ -25,9 +25,26 @@
     "typo3/cms-core": "^10.4 || ^11.5",
     "sjbr/static-info-tables": "dev-TYPO3-11"
   },
+  "autoload": {
+    "psr-4": {
+      "Renolit\\StaticInfoTablesTr\\": "Classes/"
+    }
+  },
   "extra": {
     "typo3/cms": {
-      "extension-key": "static_info_tables_tr"
+      "extension-key": "static_info_tables_tr",
+      "app-dir": ".Build",
+      "web-dir": ".Build/public"
     }
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "mkdir -p .Build/public/typo3conf/ext/",
+      "[ -L .Build/public/typo3conf/ext/static_info_tables_tr ] || ln -snvf ../../../../. .Build/public/typo3conf/ext/static_info_tables_tr"
+    ]
   }
 }
