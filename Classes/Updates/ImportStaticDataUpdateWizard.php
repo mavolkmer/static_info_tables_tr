@@ -1,6 +1,7 @@
 <?php
 namespace Renolit\StaticInfoTablesTr\Updates;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 use SJBR\StaticInfoTables\Utility\DatabaseUpdateUtility;
@@ -8,17 +9,22 @@ use SJBR\StaticInfoTables\Cache\ClassCacheManager;
 
 class ImportStaticDataUpdateWizard implements UpgradeWizardInterface {
 
+    /**
+     * @var DatabaseUpdateUtility
+     */
     protected DatabaseUpdateUtility $databaseUpdateUtility;
+
+    /**
+     * @var ClassCacheManager
+     */
     protected ClassCacheManager $classCacheManager;
 
-    public function __construct(
-        DatabaseUpdateUtility $databaseUpdateUtility,
-        ClassCacheManager $classCacheManager
-    )
+    public function __construct()
     {
-        $this->databaseUpdateUtility = $databaseUpdateUtility;
-        $this->classCacheManager = $classCacheManager;
+        $this->databaseUpdateUtility = GeneralUtility::makeInstance(DatabaseUpdateUtility::class);
+        $this->classCacheManager = GeneralUtility::makeInstance(ClassCacheManager::class);
     }
+
 
     public function getIdentifier(): string
     {
@@ -46,7 +52,12 @@ class ImportStaticDataUpdateWizard implements UpgradeWizardInterface {
 
     public function updateNecessary(): bool
     {
-        return true;
+        $updateNeeded = false;
+
+        // @TODO implement updatecheck - return true so far
+        $updateNeeded = true;
+
+        return $updateNeeded;
     }
 
     public function getPrerequisites(): array
